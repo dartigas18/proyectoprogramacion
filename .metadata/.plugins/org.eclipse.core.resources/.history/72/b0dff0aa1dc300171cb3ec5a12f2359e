@@ -1,0 +1,19 @@
+/*6 Leer una frase por teclado (máximo 80) y a continuación escribir cuantas vocales, 
+consonantes y caracteres numéricos posee.  */
+
+import java.util.Scanner;
+public class T04Ej06 {
+
+	public static void main(String[] args) {
+		final int MAX_LONGITUD = 80;
+		Scanner teclado = new Scanner(System.in);
+		String frase;
+		do{
+			System.out.println("Frase de hasta "+ MAX_LONGITUD + " caracteres como maximo: ");
+			frase = teclado.nextLine();
+			System.out.println("");
+		}while(frase.length() > MAX_LONGITUD);
+
+	}//main
+
+}//class

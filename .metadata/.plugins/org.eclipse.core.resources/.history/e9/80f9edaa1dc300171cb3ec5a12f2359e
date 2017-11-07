@@ -1,0 +1,33 @@
+/*5 Leer una frase por teclado (máximo 80 car) y construir otras dos cadenas de forma que una 
+contenga los caracteres en posición par y la otra los caracteres en posición impar. */
+import java.util.Scanner;
+
+public class T04Ej05 {
+
+	public static void main(String[] args) {
+		int pos;
+		final int MAX_LONGITUD = 80;
+		Scanner teclado = new Scanner(System.in);
+		String frase, cadenapar="", cadenaimpar="";
+		do{
+			System.out.println("Frase de hasta "+ MAX_LONGITUD + " caracteres como maximo: ");
+			frase = teclado.nextLine();
+			System.out.println("");
+		}while(frase.length() > MAX_LONGITUD);
+
+		for (pos = 0; pos < frase.length(); pos++){
+			if (pos %2 == 0 ) {
+				// posicion par:
+				cadenapar = cadenapar + frase.charAt(pos);
+			}
+			else {
+				// posicion impar:
+				cadenaimpar = cadenaimpar + frase.charAt(pos);
+			}
+		}//for
+
+		System.out.println("La cadena par es: " + cadenapar);
+		System.out.println("La cadena impar es: " + cadenaimpar);
+	}//main
+
+}//class

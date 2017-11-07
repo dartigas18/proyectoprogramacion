@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class T04Ej05 {
+
+	public static void main(String[] args) {
+		final int MAX_LONGITUD = 80;
+		Scanner teclado = new Scanner(System.in);
+		String frase;
+		do{
+			System.out.println("Frase de hasta "+ MAX_LONGITUD + " caracteres como maximo: ");
+			frase = teclado.nextLine();
+			System.out.println("Si quieres que cambie a mayusculas, di 'mayuscula' o a minusculas di 'minuscula'");
+			}while(frase.length() > MAX_LONGITUD);
+
+	}//main
+
+}//class
